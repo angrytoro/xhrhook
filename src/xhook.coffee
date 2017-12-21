@@ -451,7 +451,8 @@ XHookHttpRequest = WINDOW[XMLHTTP] = ->
       #async or sync?
       if hook.length is 1
         done hook request
-      else if hook.length is 2 and request.async
+      # else if hook.length is 2 and request.async
+      else if hook.length is 2
         #async handlers must use an async xhr
         hook request, done
       else
